@@ -1,0 +1,505 @@
+:root {
+    --font-family: 'Outfit', sans-serif; /* Define a custom property for the font family */
+    --font-weight-bold: bold; /* Define a custom property for bold font weight */
+    --font-weight-regular: normal; /* Define a custom property for regular font weight */
+    --font-size-base: 16px; /* Define a custom property for base font size */
+    --font-size-large: 28px; /* Define a custom property for large font size */
+    --font-size-medium: 20px; /* Define a custom property for medium font size */
+    --font-size-small: 14px; /* Define a custom property for small font size */
+    --font-size-h1: 36px; /* Define a custom property for h1 font size */
+    --font-size-h2: 32px; /* Define a custom property for h2 font size */
+    --font-size-h3: 28px; /* Define a custom property for h3 font size */
+    --font-size-h4: 24px; /* Define a custom property for h4 font size */
+    --font-size-h5: 20px; /* Define a custom property for h5 font size */
+    --font-size-p: 16px; /* Define a custom property for paragraph font size */
+    --font-size-label: 14px; /* Define a custom property for label font size */
+
+    --padding-section: 2rem 0; /* Define a custom property for section padding */
+
+    /* Colors */
+    --secondary-text: #6C7571; 
+    --primary-text: #212623; 
+    --border: #D2DCD7; 
+    --primary: #0A8935; 
+    --bg: #FAFDFB; 
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family); /* Apply the custom font family */
+    background-color: var(--bg); /* Apply the custom background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow-x: hidden;
+}
+
+/* Typography Styles */
+h1 {
+    font-size: var(--font-size-h1); /* Apply the custom h1 font size */
+    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
+}
+
+h2 {
+    font-size: var(--font-size-h2); /* Apply the custom h2 font size */
+    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
+}
+
+h3 {
+    font-size: var(--font-size-h3); /* Apply the custom h3 font size */
+    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
+}
+
+h4 {
+    font-size: var(--font-size-h4); /* Apply the custom h4 font size */
+    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
+}
+
+h5 {
+    font-size: var(--font-size-h5); /* Apply the custom h5 font size */
+    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
+}
+
+p {
+    font-size: var(--font-size-p); /* Apply the custom paragraph font size */
+    font-weight: var(--font-weight-regular); /* Apply the custom regular font weight */
+}
+
+label {
+    font-size: var(--font-size-label); /* Apply the custom label font size */
+    font-weight: var(--font-weight-regular); /* Apply the custom regular font weight */
+}
+
+#header {
+    position: sticky; /* Make the header stick to the top of the viewport */
+    top: 0; /* Position the header at the top */
+    background-color: var(--bg); /* Apply the custom background color */
+    z-index: 1000; /* Ensure the header is above other elements */
+    border-bottom: 1px solid var(--border); /* Add a bottom border with the custom border color */
+    width: 100%; /* Make the header full width */
+}
+
+.nav-link {
+    color: var(--secondary-text); 
+}
+
+.nav-link:hover {
+    color: var(--primary); 
+}
+
+.nav-link:active {
+    color: var(--primary); 
+}
+
+/* Section Styles */
+section {
+    padding: var(--padding-section); /* Apply the custom padding */
+    background-color: var(--bg); /* Apply the custom background color */
+}
+
+h1, h2 {
+    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
+    padding: 2rem; /* Add padding */
+    margin: 0; /* Remove default margin */
+    font-size: var(--font-size-large); /* Apply the custom large font size */
+}
+
+#home h1 {
+    font-size: 4rem;
+    line-height: 1rem;
+}
+
+/* Projects Section Styles */
+#projects-section {
+    background-color: #000; /* Dark background for the section */
+    padding: 2rem 0;
+}
+
+/* CTA Box Styles */
+.cta-box {
+    background-color: #111; /* Box background color */
+    border: 2px solid #fff; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 1.5rem 2rem; /* Padding inside the box */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /* Space between elements */
+}
+
+.cta-text {
+    color: #fff; /* White text */
+    font-size: 1rem; /* Font size */
+    flex: 1; /* Make the text take up remaining space */
+    margin: 0; /* Remove default margin */
+}
+
+.cta-button {
+    background-color: #32ff7e; /* Green button background */
+    color: #000; /* Black text */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 0.8rem 1.5rem; /* Padding inside the button */
+    border: 2px solid #fff; /* Border around the button */
+    border-radius: 10px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.cta-button:hover {
+    background-color: #28e071; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block; /* Display as inline-block */
+    padding: 0.25em 0.4em; /* Add padding */
+    font-size: var(--font-size-small); /* Set font size */
+    font-weight: var(--font-weight-bold); /* Set font weight */
+    color: #fff; /* Set text color */
+    background-color: var(--primary); /* Set background color */
+    border-radius: 0.25rem; /* Add border radius */
+    text-align: center; /* Center align text */
+    vertical-align: baseline; /* Align vertically */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cta-box {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align the content */
+    }
+
+    .cta-text {
+        margin-bottom: 1rem; /* Add spacing below the text */
+    }
+
+    .cta-button {
+        width: 100%; /* Make the button full-width */
+    }
+}
+
+/* Contact Section */
+#contact {
+    text-align: center; /* Center align text */
+    margin: 40px 0; /* Add vertical margin */
+}
+
+.contact-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Display list items in a row */
+    justify-content: center; /* Center the list items */
+    gap: 48px; /* Add space between list items */
+}
+
+.contact-list li {
+    margin: 0; /* Remove default margin */
+}
+
+.contact-list a {
+    text-decoration: none; /* Remove underline from links */
+    font-size: var(--font-size-base); /* Set font size */
+    color: var(--primary-text); /* Set text color */
+    position: relative; /* Position relative to allow for positioning of child elements */
+    display: inline-flex; /* Display as inline-flex to align items */
+    align-items: center; /* Center align items vertically */
+}
+
+.contact-list a:hover {
+    color: var(--primary); /* Change color on hover to the custom primary color */
+}
+
+.external-link-icon {
+    font-size: var(--font-size-small); /* Set font size */
+    margin-left: 5px; /* Add left margin */
+    color: var(--secondary-text); /* Set text color */
+}
+
+/* Custom Ruler */
+.custom-ruler {
+    border: none; /* Remove default border */
+    height: 1px; /* Set height */
+    background-color: var(--border); /* Set background color */
+    margin: 20px 0; /* Add vertical margin */
+}
+
+/* Table Accordion */
+.table-accordion {
+    width: 100%; /* Make table full width */
+    border-collapse: collapse; /* Collapse borders into a single border */
+    margin: 20px 0; /* Add vertical margin */
+    font-size: var(--font-size-base); /* Set font size */
+    text-align: left; /* Align text to the left */
+}
+
+.table-accordion th, .table-accordion td {
+    padding: 10px; /* Add padding */
+}
+
+.main-row, .details-row {
+    border-bottom: 1px solid var(--border); /* Add bottom border */
+}
+
+.main-row {
+    background-color: var(--bg); /* Set background color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.details-row {
+    display: none; /* Hide by default */
+    background-color: var(--bg); /* Set background color */
+}
+
+.details-row td {
+    font-size: var(--font-size-base); /* Set font size */
+    padding: 15px; /* Add padding */
+}
+
+.toggle-details {
+    text-align: center; /* Center align text */
+    font-weight: var(--font-weight-bold); /* Set font weight to bold */
+}
+
+.toggle-details::after {
+    font-family: 'Material Symbols Outlined'; /* Use Material Symbols */
+    content: 'expand_more'; /* Material Symbols down arrow icon */
+    font-size: var(--font-size-small); /* Set font size */
+    margin-left: 5px; /* Add left margin */
+    vertical-align: middle; /* Align vertically */
+}
+
+.main-row.active .toggle-details::after {
+    content: 'expand_less'; /* Material Symbols up arrow icon */
+}
+
+/* Playground Section */
+#playground {
+    padding: 40px; /* Add padding */
+    background-color: var(--bg); /* Set background color */
+    text-align: center; /* Center align text */
+}
+
+#playground h2 {
+    font-size: var(--font-size-large); /* Set font size */
+    margin-bottom: 20px; /* Add bottom margin */
+    color: var(--Primary-text); /* Set text color */
+}
+
+.gallery {
+    display: flex; /* Display as flexbox */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center align items */
+    gap: 20px; /* Add space between items */
+}
+
+.card {
+    width: auto; /* Set width */
+    border: none; /* Remove border */
+    border-radius: none; /* Remove border radius */
+    padding: 16px; /* Add padding */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.card img {
+    width: 100%; /* Make image full width */
+    border-radius: 8px; /* Round corners */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+.card h3 {
+    font-size: var(--font-size-medium); /* Set font size */
+    color: var (--primary); /* Set text color */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+.card p {
+    font-size: var(--font-size-base); /* Set font size */
+    color: var(--Primary-text); /* Set text color */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary); /* Use the primary color for the background */
+    color: #ffffff; /* Set the text color to white */
+    border: none; /* Remove the default border */
+    padding: 10px 20px; /* Add padding */
+    font-size: var(--font-size-base); /* Set font size */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.btn-primary:hover {
+    background-color: var(--bg); /* Darken the background color on hover */
+    color: var(--Primary-text); /* Darken the background color on hover */
+    border: 1px solid var(--primary); /* Add border on hover */
+}
+
+.btn-primary:focus {
+    outline: none; /* Remove the default focus outline */
+    background-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(10, 137, 53, 0.5); /* Add a custom focus outline */
+}
+
+.btn-primary:active {
+    background-color: var(--primary); /* Darken the background color on active */
+    --bs-btn-active-bg: var(--primary);
+}
+
+/* Tag Styles */
+.tag {
+    background-color: var(--primary); /* Background color of the tag */
+    color: #fff; /* Text color */
+    font-size: var(--font-size-small); /* Font size */
+    font-weight: var(--font-weight-regular); 
+    border-radius: 20px; /* Rounded corners */
+    /* text-transform: uppercase; Make the text uppercase */
+}
+
+.position-absolute {
+    position: absolute; /* Position the tag absolutely inside the card */
+}
+
+.top-0 {
+    top: 0; /* Align the tag to the top */
+}
+
+.start-0 {
+    left: 0; /* Align the tag to the left */
+}
+
+.m-2 {
+    margin: 0.5rem; /* Add margin for spacing */
+}
+
+.px-3 {
+    padding-left: 1rem; /* Add padding to the left */
+    padding-right: 1rem; /* Add padding to the right */
+}
+
+.py-1 {
+    padding-top: 0.25rem; /* Add padding to the top */
+    padding-bottom: 0.25rem; /* Add padding to the bottom */
+}
+
+/* Banner Section */
+#banner {
+    width: 100%; /* Full width of the viewport */
+    overflow: hidden; /* Hide overflow content */
+    background-color: var(--primary); /* Background color for the section */
+    padding: 2rem 0; /* Add some padding */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Scroll Animation Container */
+.scroll-left {
+    width: 100%; /* Full width of the viewport */
+    overflow: hidden; /* Hide content outside the container */
+    position: relative; /* Positioning for child elements */
+    background: var(--primary); /* Background color */
+    color: var(--bg); /* Text color */
+    height: auto; /* Auto height */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+}
+
+/* Scrolling Text */
+.scroll-left h3 {
+    position: absolute; /* Positioned relative to the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 0; /* Remove default margin */
+    transform: translateX(100%); /* Start from the right outside the container */
+    animation: scroll-left 15s linear infinite; /* Apply infinite scroll animation */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start outside the container */
+    }
+    100% {
+        transform: translateX(-100%); /* End outside the container on the left */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Set flex properties for 2 cards per row */
+    }
+
+    .gallery {
+        gap: 10px; /* Reduce space between items */
+    }
+
+    h1, h2 {
+        padding: 1rem; /* Reduce padding */
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    section {
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .contact-list {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Reduce space between items */
+    }
+
+    .contact-list a {
+        font-size: var(--font-size-small); /* Reduce font size */
+    }
+
+    #banner {
+        padding: 0.5rem 0;
+    }
+
+    .scroll-left p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Set flex properties for 1 card per row */
+    }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+
+    .contact-list a {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    footer {
+        font-size: smaller; /* Reduce font size */
+        text-align: center; /* Center align text */
+    }
+
+    footer .row {
+        text-align: center; /* Center align text inside rows */
+    }
+}
+
+footer {
+    color: var(--secondary-text); /* Set text color */
+}
