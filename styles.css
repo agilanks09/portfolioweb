@@ -278,7 +278,7 @@ h1, h2 {
 
 .card h3 {
     font-size: var(--font-size-medium); /* Set font size */
-    color: var(--primary); /* Set text color */
+    color: var(--Primary-text); /* Set text color */
     margin-bottom: 10px; /* Add bottom margin */
 }
 
@@ -296,6 +296,10 @@ h1, h2 {
     transition: transform 0.3s ease;
   }
 
+.card-img-top {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
 
 /* Button Styles */
 .btn-primary {
@@ -408,9 +412,10 @@ h1, h2 {
 .badge-custom {
     background-color:var(--primary); /* Custom background color */
     color: #ffffff; /* Custom text color */
-    padding: 0.5rem 1rem; /* Padding for the badge */
-    border-radius: 0.25rem; /* Rounded corners */
-    font-size: 1rem; /* Font size */
+    padding: 0.5rem; /* Padding for the badge */
+    border-radius: 10rem; /* Rounded corners */
+    font-size: .8rem; /* Font size */
+    font-weight:var(--font-weight-regular) ;
 }
 
 
