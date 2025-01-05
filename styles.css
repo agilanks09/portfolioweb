@@ -405,8 +405,13 @@ h1, h2 {
   }
   
 
-
-
+.badge-custom {
+    background-color:var(--primary); /* Custom background color */
+    color: #ffffff; /* Custom text color */
+    padding: 0.5rem 1rem; /* Padding for the badge */
+    border-radius: 0.25rem; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+}
 
 
 /* Responsive Styles */
