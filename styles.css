@@ -2,11 +2,6 @@
     --font-family: 'Outfit', sans-serif; /* Define a custom property for the font family */
     --font-weight-bold: bold; /* Define a custom property for bold font weight */
     --font-weight-regular: normal; /* Define a custom property for regular font weight */
-    --font-size-base: 16px; /* Define a custom property for base font size */
-    --font-size-large: 40px; /* Define a custom property for large font size */
-    --font-size-medium: 20px; /* Define a custom property for medium font size */
-    --font-size-small: 14px; /* Define a custom property for small font size */
-
     --padding-section: 2rem 0; /* Define a custom property for section padding */
 
     /*Colors*/ 
@@ -66,17 +61,54 @@ section {
     background-color: var(--bg); /* Apply the custom background color */
 }
 
-h1, h2 {
-    font-weight: var(--font-weight-bold); /* Apply the custom bold font weight */
-    padding: 1rem; /* Add padding */
-    margin: 0; /* Remove default margin */
-    font-size: var(--font-size-large); /* Apply the custom large font size */
+/* Heading styles */
+h1 {
+  font-size: 3rem; /* Apply the custom extra large font size */
+  font-weight: var(--font-weight-normal); /* Apply the custom bold font weight */
+  padding: 2rem;
+  margin: 0; /* Remove default margin */
 }
 
-#home h1 {
-    font-size: 4rem;
-    line-height: 1rem;
+h2 {
+  font-size: 2rem; /* Apply the custom large font size */
+  font-weight: var(--font-weight-normal); /* Apply the custom bold font weight */
+  margin: 0; /* Remove default margin */
+  padding: 2rem;
 }
+
+h3 {
+  font-size: 1.5rem; /* Apply the custom medium font size */
+  font-weight: var(--font-weight-normal); /* Apply the custom bold font weight */
+  margin: 0; /* Remove default margin */
+  padding: 1rem ;
+}
+
+/* Paragraph styles */
+p1 {
+  font-size: 1.25rem; /* Apply the custom large font size */
+  font-weight: var(--font-weight-normal); /* Apply the custom normal font weight */
+  margin: 0; /* Remove default margin */
+}
+
+p2 {
+  font-size: 1rem; /* Apply the custom medium font size */
+  font-weight: var(--font-weight-normal); /* Apply the custom normal font weight */
+  margin: 0; /* Remove default margin */
+  padding: 1rem;
+}
+
+/* Style for list items */
+li {
+  font-size: 1.25rem; /* Apply the custom large font size */
+  font-weight: var(--font-weight-normal);
+}
+
+td {
+  font-size: 1.25rem; /* Set font size */
+  font-weight: var(--font-weight-normal); /* Set font weight */
+  padding: 24px; /* Add padding */
+}
+
 
 
 /* Projects Section Styles */
@@ -107,9 +139,7 @@ h1, h2 {
   .cta-button {
     background-color: #32ff7e; /* Green button background */
     color: #000; /* Black text */
-    font-size: 1rem; /* Font size */
-    font-weight: bold; /* Bold text */
-    padding: 0.8rem 1.5rem; /* Padding inside the button */
+    padding: 1rem 2rem; /* Padding inside the button */
     border: 2px solid #fff; /* Border around the button */
     border-radius: 10px; /* Slightly rounded corners */
     text-decoration: none; /* Remove underline */
@@ -122,22 +152,6 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
   }
   
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .cta-box {
-      flex-direction: column; /* Stack elements vertically */
-      text-align: center; /* Center align the content */
-    }
-  
-    .cta-text {
-      margin-bottom: 1rem; /* Add spacing below the text */
-    }
-  
-    .cta-button {
-      width: 100%; /* Make the button full-width */
-    }
-  }
-  
 
 
 /* Contact Section */
@@ -148,19 +162,14 @@ h1, h2 {
 
 .contact-list {
     list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+    padding: 2rem; /* Remove default padding */
     display: flex; /* Display list items in a row */
     justify-content: center; /* Center the list items */
     gap: 48px; /* Add space between list items */
 }
 
-.contact-list li {
-    margin: 0; /* Remove default margin */
-}
-
 .contact-list a {
     text-decoration: none; /* Remove underline from links */
-    font-size: var(--font-size-base); /* Set font size */
     color: var(--Primary-text); /* Set text color */
     position: relative; /* Position relative to allow for positioning of child elements */
     display: inline-flex; /* Display as inline-flex to align items */
@@ -171,11 +180,7 @@ h1, h2 {
     color: var(--primary); /* Change color on hover to the custom primary color */
 }
 
-.external-link-icon {
-    font-size: var(--font-size-small); /* Set font size */
-    margin-left: 5px; /* Add left margin */
-    color: var(--Primary-text); /* Set text color */
-}
+
 
 /* Custom Ruler */
 .custom-ruler {
@@ -195,7 +200,7 @@ h1, h2 {
 }
 
 .table-accordion th, .table-accordion td {
-    padding: 10px; /* Add padding */
+    padding: 1.5rem; /* Add padding */
 }
 
 .main-row, .details-row {
@@ -212,11 +217,6 @@ h1, h2 {
     background-color: var(--bg); /* Set background color */
 }
 
-.details-row td {
-    font-size: var(--font-size-base); /* Set font size */
-    padding: 24px; /* Add padding */
-}
-
 .toggle-details {
     text-align: center; /* Center align text */
     font-weight: var(--font-weight-bold); /* Set font weight to bold */
@@ -227,6 +227,10 @@ h1, h2 {
     background-color: var(--bg); /* Set background color on hover */
     border-bottom: 1px solid var(--primary);
     color: var(--primary); /* Change text color on hover */
+}
+
+.main-row.active {
+  color: var(--primary); /* Change text color when active */
 }
 
 .toggle-details::after {
@@ -248,12 +252,6 @@ h1, h2 {
     text-align: center; /* Center align text */
 }
 
-#playground h2 {
-    font-size: var(--font-size-large); /* Set font size */
-    margin-bottom: 20px; /* Add bottom margin */
-    color: var(--Primary-text); /* Set text color */
-}
-
 .gallery {
     display: flex; /* Display as flexbox */
     flex-wrap: wrap; /* Allow wrapping of items */
@@ -265,7 +263,7 @@ h1, h2 {
     width: auto; /* Set width */
     border: none; /* Remove border */
     border-radius: none; /* Remove border radius */
-    padding: 16px; /* Add padding */
+    padding: 1rem; /* Add padding */
     text-align: left; /* Align text to the left */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
@@ -276,23 +274,12 @@ h1, h2 {
     margin-bottom: 10px; /* Add bottom margin */
 }
 
-.card h3 {
-    font-size: var(--font-size-medium); /* Set font size */
-    color: var(--Primary-text); /* Set text color */
-    margin-bottom: 10px; /* Add bottom margin */
-}
-
-.card p {
-    font-size: var(--font-size-base); /* Set font size */
-    color: var(--Primary-text); /* Set text color */
-}
-
 .card-link {
     text-decoration: none;
   }
 
   .card-link:hover .project-card {
-    transform: scale(1.05);
+    transform: scale(1);
     transition: transform 0.3s ease;
   }
 
@@ -432,9 +419,21 @@ h1, h2 {
     font-weight:var(--font-weight-regular) ;
 }
 
-
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .cta-box {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center align the content */
+  }
+
+  .cta-text {
+    margin-bottom: 1rem; /* Add spacing below the text */
+  }
+
+  .cta-button {
+    width: 100%; /* Make the button full-width */
+  }
+
     .card {
         flex: 1 1 calc(50% - 20px); /* Set flex properties for 2 cards per row */
     }
@@ -443,11 +442,15 @@ h1, h2 {
         gap: 10px; /* Reduce space between items */
     }
 
-    h1, h2 {
+    h1{
         padding: 1rem; /* Reduce padding */
-        font-size: 1.5rem; /* Reduce font size */
+        font-size: 2rem; /* Reduce font size */
     }
 
+    p1{
+      padding: 1rem; /* Reduce padding */
+      font-size: 1rem; /* Reduce font size */
+  }
     section {
         padding: 1rem; /* Reduce padding */
     }
@@ -479,13 +482,15 @@ h1, h2 {
         flex: 1 1 100%; /* Set flex properties for 1 card per row */
     }
 
-    h1, h2 {
-        font-size: 1.2rem; /* Reduce font size */
+    h1{
+        font-size: 2rem; /* Reduce font size */
     }
 
-    .contact-list a {
-        font-size: 14px; /* Reduce font size */
+    p1{
+      font-size: 1rem; /* Reduce font size */
     }
+
+   
 
     footer {
         font-size: smaller; /* Reduce font size */
