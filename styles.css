@@ -301,6 +301,20 @@ h1, h2 {
     height: auto; /* Maintain aspect ratio */
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card-link .card {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card-link .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
 /* Button Styles */
 .btn-primary {
     background-color: var(--primary); /* Use the primary color for the background */
