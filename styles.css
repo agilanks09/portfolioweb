@@ -44,7 +44,8 @@ body {
 }
 
 .nav-link {
-    color: var(--secondary-text); 
+    font-size: 1rem; /* Apply the custom font size */
+    color: var(--Primary-text); 
 }
 
 .nav-link:hover {
