@@ -6,7 +6,8 @@
 
     /*Colors*/ 
     --secondary-text: #6C7571; 
-    --Primary-text: #212623; 
+    --Primary-text: #212623;
+    --ontext:#ffffff;
     --border: #D2DCD7; 
     --primary: #0A8935; 
     --bg: #FAFDFB; 
@@ -44,7 +45,6 @@ body {
 }
 
 .nav-link {
-    font-size: 1rem; /* Apply the custom font size */
     color: var(--Primary-text); 
 }
 
@@ -85,18 +85,20 @@ h3 {
 }
 
 /* Paragraph styles */
-p1 {
-  font-size: 1.25rem; /* Apply the custom large font size */
+p {
+  font-size: 1rem; /* Apply the custom large font size */
   font-weight: var(--font-weight-normal); /* Apply the custom normal font weight */
   margin: 0; /* Remove default margin */
 }
 
-p2 {
-  font-size: 1rem; /* Apply the custom medium font size */
-  font-weight: var(--font-weight-normal); /* Apply the custom normal font weight */
-  margin: 0; /* Remove default margin */
-  padding: 1rem;
+
+.caption {
+  font-size: 1rem; /* Set font size */
+  font-weight: var(--font-weight-normal); /* Set font weight */
+  color: var(--secondary-text); /* Set text color */
+
 }
+
 
 /* Style for list items */
 li {
@@ -114,7 +116,6 @@ td {
 
 /* Projects Section Styles */
 #projects-section {
-    background-color: #000; /* Dark background for the section */
     padding: 2rem 0;
   }
   
@@ -246,6 +247,21 @@ td {
 
 }
 
+
+
+
+
+
+#about{
+    padding:0;
+  
+}
+
+.p{
+  text-align: left; /* Align text to the left */
+}
+
+
 /* Playground Section */
 #playground {
     padding: 40px; /* Add padding */
@@ -371,35 +387,38 @@ td {
   }
   
 
-#banner{
-    width: 100%; /* Full width of the viewport */
-    overflow: hidden; /* Hide overflow content */
-    background-color: var(--primary); /* Background color for the section */
-    padding: 2rem 0; /* Add some padding */
-    align-items: center; /* Center items vertically */
+
+  .marquee-container {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--bg);
+    overflow: hidden;
+    padding: 15px 0;
 }
-  
-  /* Scroll Animation Container */
-.scroll-left {
-    width: 100%; /* Full width of the viewport */
-    overflow: hidden; /* Hide content outside the container */
-    position: relative; /* Positioning for child elements */
-    background: var(--primary); /* Background color */
-    color: var(--bg); /* Text color */
-    height: 50px; /* Set height */
-    line-height: 50px; /* Vertically center the text */
-    align-items: center; /* Center items vertically */
-  }
-  
-  /* Scrolling Text */
-  .scroll-left h3 {
-    position: absolute; /* Positioned relative to the container */
-    white-space: nowrap; /* Prevent text from wrapping */
-    margin: 0; /* Remove default margin */
-    transform: translateX(100%); /* Start from the right outside the container */
-    animation: scroll-left 15s linear infinite; /* Apply infinite scroll animation */
-  }
-  
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+    0% { transform: translate(100%); }
+    100% { transform: translate(-100%, 0); }
+}
+
+
+
+
+
+
+
+
+
+
   /* Keyframes for scrolling animation */
   @keyframes scroll-left {
     0% {
@@ -419,6 +438,17 @@ td {
     font-size: .8rem; /* Font size */
     font-weight:var(--font-weight-regular) ;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -448,7 +478,7 @@ td {
         font-size: 2rem; /* Reduce font size */
     }
 
-    p1{
+    p{
       padding: 1rem; /* Reduce padding */
       font-size: 1rem; /* Reduce font size */
   }
@@ -462,14 +492,16 @@ td {
     }
 
     .contact-list a {
-        font-size: var(--font-size-small); /* Reduce font size */
+        font-size: 1rem; /* Reduce font size */
     }
-        #banner {
-          padding: 0.5rem 0;
-        }
-        .scroll-left p {
-          font-size: 0.9rem;
-        }
+    .table-accordion th, .table-accordion td {
+      padding: 1rem; /* Reduce padding */
+      font-size: 1rem; /* Reduce font size */
+  }
+
+  .toggle-details::after {
+      font-size: 1rem; /* Reduce arrow size */
+  }
       }
 
 
@@ -479,17 +511,36 @@ td {
 
 
 @media (max-width: 480px) {
+
+
+  section{
+    padding-top: 2rem; /* Reduce padding */
+    padding-bottom: 2rem; /* Reduce padding */
+
+  }
+
     .card {
         flex: 1 1 100%; /* Set flex properties for 1 card per row */
     }
 
     h1{
         font-size: 2rem; /* Reduce font size */
+        padding-bottom: .5rem; /* Reduce padding */
     }
 
-    p1{
+    p{
       font-size: 1rem; /* Reduce font size */
+      padding: 1rem; /* Reduce padding */
     }
+
+    .table-accordion th, .table-accordion td {
+      padding: 0.5rem; /* Further reduce padding */
+      font-size: 1rem; /* Further reduce font size */
+  }
+
+  .toggle-details::after {
+      font-size: 1rem; /* Further reduce arrow size */
+  }
 
    
 
@@ -503,6 +554,3 @@ td {
     }
 }
 
-footer {
-    color:var(--secondary-text); /* Set text color */
-}
