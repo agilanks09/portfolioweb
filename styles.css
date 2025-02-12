@@ -1,16 +1,16 @@
 :root {
-    --font-family: 'Outfit', sans-serif; /* Define a custom property for the font family */
+    --font-family: "Inter Tight", serif;
     --font-weight-bold: bold; /* Define a custom property for bold font weight */
     --font-weight-regular: normal; /* Define a custom property for regular font weight */
     --padding-section: 2rem 0; /* Define a custom property for section padding */
 
     /*Colors*/ 
-    --secondary-text: #6C7571; 
-    --Primary-text: #212623;
+    --secondary-text: #666666; 
+    --Primary-text: #111111;
     --ontext:#ffffff;
     --border: #D2DCD7; 
     --primary: #0A8935; 
-    --bg: #FAFDFB; 
+    --bg: #f5f5f5; 
  
 }
 
@@ -30,7 +30,7 @@ body {
     padding: 0; /* Remove default padding */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     overflow-x: hidden;
-    margin: 0;
+    margin: 0px ;
     padding: 0;
 }
 
@@ -42,6 +42,7 @@ body {
     z-index: 1000; /* Ensure the header is above other elements */
     border-bottom: 1px solid var(--border); /* Add a bottom border with the custom border color */
     width: 100%; /* Make the header full width */
+    margin: 0;
 }
 
 .nav-link {
@@ -64,25 +65,20 @@ section {
 
 /* Heading styles */
 h1 {
-  font-size: 3rem; /* Apply the custom extra large font size */
+  font-size: 2rem; /* Apply the custom extra large font size */
   font-weight: var(--font-weight-normal); /* Apply the custom bold font weight */
-  padding: 2rem;
+  padding: 0;
   margin: 0; /* Remove default margin */
 }
 
 h2 {
-  font-size: 2rem; /* Apply the custom large font size */
+  font-size: 1.5rem; /* Apply the custom large font size */
   font-weight: var(--font-weight-normal); /* Apply the custom bold font weight */
   margin: 0; /* Remove default margin */
-  padding: 2rem;
+  padding: 0;
 }
 
-h3 {
-  font-size: 1.5rem; /* Apply the custom medium font size */
-  font-weight: var(--font-weight-normal); /* Apply the custom bold font weight */
-  margin: 0; /* Remove default margin */
-  padding: 1rem ;
-}
+
 
 /* Paragraph styles */
 p {
@@ -93,7 +89,7 @@ p {
 
 
 .caption {
-  font-size: 1rem; /* Set font size */
+  font-size: 0.8rem; /* Set font size */
   font-weight: var(--font-weight-normal); /* Set font weight */
   color: var(--secondary-text); /* Set text color */
 
@@ -102,58 +98,53 @@ p {
 
 /* Style for list items */
 li {
-  font-size: 1.25rem; /* Apply the custom large font size */
+  font-size: 1rem; /* Apply the custom large font size */
   font-weight: var(--font-weight-normal);
 }
 
 td {
-  font-size: 1.25rem; /* Set font size */
+  font-size: 1rem; /* Set font size */
   font-weight: var(--font-weight-normal); /* Set font weight */
   padding: 24px; /* Add padding */
 }
 
 
+/* Project Section Styling */
+.project-section {
+  background-color: var(--bg);
+  padding: 60px 0;
+}
 
-/* Projects Section Styles */
-#projects-section {
-    padding: 2rem 0;
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-title {
+  color:var(--Primary-text);
+  margin-bottom: 4px;
+  text-align: left; /* Aligns title to the left */
+}
+
+.project-description {
+  color: var(--secondary-text);
+  text-align: left; /* Aligns description to the left */
+  margin-bottom: 10px;
+}
+
+.project-meta {
+  color: var(--secondary-text);
+  text-align: right; /* Aligns metadata (CRED / 2024) to the right */
+}
+
+/* Responsive Fix: Align meta text to left on small screens */
+@media (max-width: 768px) {
+  .project-meta {
+    text-align: left;
+    margin-top: 10px;
   }
-  
-  /* CTA Box Styles */
-  .cta-box {
-    background-color: #111; /* Box background color */
-    border: 2px solid #fff; /* Border color */
-    border-radius: 20px; /* Rounded corners */
-    padding: 1.5rem 2rem; /* Padding inside the box */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem; /* Space between elements */
-  }
-  
-  .cta-text {
-    color: #fff; /* White text */
-    font-size: 1rem; /* Font size */
-    flex: 1; /* Make the text take up remaining space */
-    margin: 0; /* Remove default margin */
-  }
-  
-  .cta-button {
-    background-color: #32ff7e; /* Green button background */
-    color: #000; /* Black text */
-    padding: 1rem 2rem; /* Padding inside the button */
-    border: 2px solid #fff; /* Border around the button */
-    border-radius: 10px; /* Slightly rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: all 0.3s ease; /* Smooth transition for hover */
-  }
-  
-  .cta-button:hover {
-    background-color: #28e071; /* Slightly darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-  }
-  
+}
 
 
 /* Contact Section */
@@ -189,7 +180,7 @@ td {
     border: none; /* Remove default border */
     height: 1px; /* Set height */
     background-color: var(--border); /* Set background color */
-    margin: 20px 0; /* Add vertical margin */
+    margin: 0; /* Add vertical margin */
 }
 
 /* Table Accordion */
@@ -248,166 +239,43 @@ td {
 }
 
 
-
-
-
-
-#about{
-    padding:0;
-  
-}
-
-.p{
-  text-align: left; /* Align text to the left */
-}
-
-
 /* Playground Section */
 #playground {
-    padding: 40px; /* Add padding */
-    background-color: var(--bg); /* Set background color */
-    text-align: center; /* Center align text */
+  padding: 0; /* Add padding */
+  background-color: var(--bg); /* Set background color */
+  text-align: center; /* Center align text */
 }
 
+.product-type{
+  font-size: 0.8rem;
+  color:var(--secondary-text)
+}
 .gallery {
-    display: flex; /* Display as flexbox */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    justify-content: center; /* Center align items */
-    gap: 20px; /* Add space between items */
+  display: flex; /* Display as flexbox */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: center; /* Center align items */
+  gap: 20px; /* Add space between items */
 }
 
 .card {
-    width: auto; /* Set width */
-    border: none; /* Remove border */
-    border-radius: none; /* Remove border radius */
-    padding: 1rem; /* Add padding */
-    text-align: left; /* Align text to the left */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: auto; /* Set width */
+  border: none; /* Remove border */
+  padding: 1rem; /* Add padding */
+  text-align: left; /* Align text to the left */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .card img {
-    width: 100%; /* Make image full width */
-    border-radius: 8px; /* Round corners */
-    margin-bottom: 10px; /* Add bottom margin */
+  width: 100%; /* Make image full width */
+  border-radius: 8px; /* Slightly rounded corners */
+  margin-bottom: 24px; /* Add spacing below image */
 }
 
 .card-link {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 24px; /* Add spacing below image */
 
-  .card-link:hover .project-card {
-    transform: scale(1);
-    transition: transform 0.3s ease;
-  }
-
-.card-img-top {
-    width: 100%; /* Ensure the image takes up the full width of the card */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.card-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .card-link .card {
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .card-link .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-/* Button Styles */
-.btn-primary {
-    background-color: var(--primary); /* Use the primary color for the background */
-    color: #ffffff; /* Set the text color to white */
-    border: none; /* Remove the default border */
-    padding: 10px 20px; /* Add padding */
-    font-size: var(--font-size-base); /* Set font size */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s ease; /* Add transition for background color */
-}
-
-.btn-primary:hover {
-    background-color: var(--bg); /* Darken the background color on hover */
-    color: var(--Primary-text); /* Darken the background color on hover */
-    border: 1px solid var(--primary); /* Add border on hover */
-
-}
-
-.btn-primary:focus {
-    outline: none; /* Remove the default focus outline */
-    background-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(10, 137, 53, 0.5); /* Add a custom focus outline */
-}
-
-.btn-primary:active {
-    background-color: var(--primary); /* Darken the background color on active */
-    --bs-btn-active-bg:var(--primary)
-}
-
-
-/* Tag Styles */
-.tag {
-    background-color: var(--primary); /* Background color of the tag */
-    color: #fff; /* Text color */
-    font-size: var(--font-size-small); /* Font size */
-    font-weight: var(--font-weight-regular); 
-    border-radius: 20px; /* Rounded corners */
-    /* text-transform: uppercase; Make the text uppercase */
-  }
-  
-  .position-absolute {
-    position: absolute; /* Position the tag absolutely inside the card */
-  }
-  
-  .top-0 {
-    top: 0; /* Align the tag to the top */
-  }
-  
-  .start-0 {
-    left: 0; /* Align the tag to the left */
-  }
-  
-  .m-2 {
-    margin: 0.5rem; /* Add margin for spacing */
-  }
-  
-  .px-3 {
-    padding-left: 1rem; /* Add padding to the left */
-    padding-right: 1rem; /* Add padding to the right */
-  }
-  
-  .py-1 {
-    padding-top: 0.25rem; /* Add padding to the top */
-    padding-bottom: 0.25rem; /* Add padding to the bottom */
-  }
-  
-
-
-  .marquee-container {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--primary);
-    color: var(--bg);
-    overflow: hidden;
-    padding: 15px 0;
-}
-.marquee-content {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 10s linear infinite;
-}
-.marquee-content:hover {
-    animation-play-state: paused;
-}
-@keyframes marquee {
-    0% { transform: translate(100%); }
-    100% { transform: translate(-100%, 0); }
 }
 
 
@@ -430,28 +298,16 @@ td {
   }
   
 
-.badge-custom {
-    background-color:var(--primary); /* Custom background color */
-    color: #ffffff; /* Custom text color */
-    padding: 0.5rem; /* Padding for the badge */
-    border-radius: 10rem; /* Rounded corners */
-    font-size: .8rem; /* Font size */
-    font-weight:var(--font-weight-regular) ;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+  body {
+    margin: 0px 24px;
+    padding: 0;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
   .cta-box {
     flex-direction: column; /* Stack elements vertically */
     text-align: center; /* Center align the content */
@@ -474,12 +330,10 @@ td {
     }
 
     h1{
-        padding: 1rem; /* Reduce padding */
         font-size: 2rem; /* Reduce font size */
     }
 
     p{
-      padding: 1rem; /* Reduce padding */
       font-size: 1rem; /* Reduce font size */
   }
     section {
@@ -513,6 +367,12 @@ td {
 @media (max-width: 480px) {
 
 
+  body {
+    margin: 0px 16px;
+    padding: 0;
+}
+
+
   section{
     padding-top: 2rem; /* Reduce padding */
     padding-bottom: 2rem; /* Reduce padding */
@@ -530,7 +390,6 @@ td {
 
     p{
       font-size: 1rem; /* Reduce font size */
-      padding: 1rem; /* Reduce padding */
     }
 
     .table-accordion th, .table-accordion td {
