@@ -27,6 +27,7 @@ body {
     font-family: var(--font-family); /* Apply the custom font family */
     background-color: var(--bg); /* Apply the custom background color */
     margin: 0; /* Remove default margin */
+    height: 100vh;
     padding: 0; /* Remove default padding */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     overflow-x: hidden;
