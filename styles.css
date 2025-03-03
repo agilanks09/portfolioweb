@@ -6,7 +6,7 @@
 
     /*Colors*/ 
     --secondary-text: #666666; 
-    --Primary-text: #111111;
+    --primary-text: #111111;
     --ontext:#ffffff;
     --border: #D2DCD7; 
     --primary: #0A8935; 
@@ -122,7 +122,7 @@ td {
 }
 
 .project-title {
-  color:var(--Primary-text);
+  color:var(--primary-text);
   margin-bottom: 4px;
   text-align: left; /* Aligns title to the left */
 }
@@ -137,6 +137,15 @@ td {
   color: var(--secondary-text);
   text-align: right; /* Aligns metadata (CRED / 2024) to the right */
 }
+
+.subheading {
+  color:var(--secondary-text); /* Bootstrap's secondary color */
+}
+
+
+
+
+
 
 /* Responsive Fix: Align meta text to left on small screens */
 @media (max-width: 768px) {
